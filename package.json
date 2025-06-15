@@ -1,0 +1,16 @@
+	{
+	  "name": "com.ggemco.test2",
+	  "version": "1.0.0",
+	  "displayName": "Test2 Display Name",
+	  "description": "Test2 설명",
+	  "unity": "2019.4",
+	  "author": {
+	    "name": "GGemCo",
+	    "url": "https://github.com/GGemCo/test2"
+	  },
+	  "keywords": [
+	    "debug",
+	    "logging",
+	    "unity"
+	  ]
+	}
