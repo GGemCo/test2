@@ -28,6 +28,11 @@
 				"displayName": "Scenes Resource",
 				"description": "Scenes Resource 설명",
 				"path": "Samples~/Scenes"
+			},
+			{
+				"displayName": "Images Resource",
+				"description": "Images Resource 설명",
+				"path": "Samples~/Images"
 			}
 		],
 	  "keywords": [
