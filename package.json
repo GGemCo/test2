@@ -23,6 +23,11 @@
 				"displayName": "Spine Resource",
 				"description": "Spine Resource 설명",
 				"path": "Samples~/Spines"
+			},
+			{
+				"displayName": "Scenes Resource",
+				"description": "Scenes Resource 설명",
+				"path": "Samples~/Scenes"
 			}
 		],
 	  "keywords": [
