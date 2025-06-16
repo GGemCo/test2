@@ -1,5 +1,6 @@
 ﻿using GGemCo.Scripts;
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEngine;
 
 namespace GGemCo.Editor
@@ -54,8 +55,11 @@ namespace GGemCo.Editor
 
         private static void UpdateScriptingDefineSymbols(bool enable)
         {
+#if UNITY_6000_0_OR_NEWER
+            string symbols = PlayerSettings.GetScriptingDefineSymbols(NamedBuildTarget.Standalone);
+#else
             string symbols = PlayerSettings.GetScriptingDefineSymbolsForGroup(BuildTargetGroup.Standalone);
-
+#endif
             if (enable)
             {
                 if (!symbols.Contains(ConfigDefine.SpineDefineSymbol))
@@ -71,7 +75,11 @@ namespace GGemCo.Editor
                 }
             }
 
+#if UNITY_6000_0_OR_NEWER
+            PlayerSettings.SetScriptingDefineSymbols(NamedBuildTarget.Standalone, symbols);
+#else
             PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Standalone, symbols);
+#endif
             Debug.Log($"Scripting Define Symbols updated: {symbols}");
         }
     }

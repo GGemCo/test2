@@ -100,7 +100,11 @@ namespace GGemCo.Editor
                 grid.cellLayout = GridLayout.CellLayout.Rectangle;
             }
 
+#if UNITY_6000_0_OR_NEWER
+            var defaultMap = FindFirstObjectByType<DefaultMap>();
+#else
             var defaultMap = FindObjectOfType<DefaultMap>();
+#endif
             
             characterManager = new CharacterManager();
             characterManager.Initialize(_tableNpc, _tableMonster, _tableAnimation);

@@ -27,7 +27,12 @@ namespace GGemCo.Editor
             rectTransform.anchorMax = new Vector2(0.5f,1f);
             rectTransform.pivot = new Vector2(0.5f,1f);
             TextMeshProUGUI text = infoObject.AddComponent<TextMeshProUGUI>();
+            
+#if UNITY_6000_0_OR_NEWER
+            text.textWrappingMode = TextWrappingModes.NoWrap;
+#else
             text.enableWordWrapping = false;
+#endif
             text.alignment = TextAlignmentOptions.Top;
             text.fontSize = 20;
             return text;

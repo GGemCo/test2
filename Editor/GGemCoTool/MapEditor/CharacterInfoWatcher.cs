@@ -21,8 +21,12 @@ namespace GGemCo.Editor
         private static void OnEditorUpdate()
         {
             // 모든 Npc 컴포넌트를 가진 오브젝트 검사
+#if UNITY_6000_0_OR_NEWER
+            var characterBases = GameObject.FindObjectsByType<CharacterBase>(FindObjectsSortMode.None);
+#else
             var characterBases = GameObject.FindObjectsOfType<CharacterBase>();
-
+#endif
+            
             foreach (var npc in characterBases)
             {
                 Transform npcTransform = npc.transform;

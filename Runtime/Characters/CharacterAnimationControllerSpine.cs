@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if GGEMCO_USE_SPINE
+using System.Collections;
 using System.Collections.Generic;
 using Spine;
 using Spine.Unity;
@@ -7,7 +8,6 @@ using Event = Spine.Event;
 
 namespace GGemCo.Scripts
 {
-#if GGEMCO_USE_SPINE
     /// <summary>
     /// 캐릭터 스파인 애니메이션 처리
     /// </summary>
@@ -190,5 +190,5 @@ namespace GGemCo.Scripts
             PlayAnimation(animationName, loop, timeScale);
         }
     }
-#endif
 }
+#endif

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+#if GGEMCO_USE_SPINE
 using Spine;
+#endif
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -315,7 +317,7 @@ namespace GGemCo.Scripts
             {
                 textResult.gameObject.SetActive(false);
             }
-#if GGEMCO_USE_SPINE
+#if GGEMCO_USE_SPINE            
             // 이펙트 실행
             List<StruckAddAnimation> addAnimations = new List<StruckAddAnimation>
             {
@@ -338,7 +340,11 @@ namespace GGemCo.Scripts
         /// 강화 연출 스파인 애니메이션이 종료된 후 UI에 결과를 반영합니다.
         /// </summary>
         /// <param name="e"></param>
+#if GGEMCO_USE_SPINE           
         private void OnAnimationComplete(TrackEntry e = null)
+#else
+        private void OnAnimationComplete()
+#endif
         {
             textResult.gameObject.SetActive(true);
             if (updateResult)

@@ -1,9 +1,9 @@
 	{
 	  "name": "com.ggemco.test2",
 	  "version": "1.0.0",
-	  "displayName": "Test2 Display Name",
-	  "description": "Test2 설명",
-	  "unity": "2019.4",
+	  "displayName": "GGemCoSDK",
+	  "description": "GGemCoSDK 설명",
+	  "unity": "2022.3",
 	  "author": {
 	    "name": "GGemCo",
 	    "url": "https://github.com/GGemCo/test2"
@@ -14,8 +14,6 @@
 			"com.unity.textmeshpro": "3.0.9"
 		},
 	  "keywords": [
-	    "debug",
-	    "logging",
 	    "unity"
 	  ]
 	}

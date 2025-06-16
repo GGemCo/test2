@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Spine;
 using UnityEngine;
 
 namespace GGemCo.Scripts
@@ -74,19 +73,19 @@ namespace GGemCo.Scripts
             yield return new WaitForSeconds(f);
             EffectAnimationController.PlayEffectAnimation(CLIP_NAME_END);
         }
-        /// <summary>
-        /// 애니메이션이 끝나면 호출되는 콜백 함수
-        /// </summary>
-        /// <param name="entry"></param>
-        protected void OnAnimationComplete(TrackEntry entry)
-        {
-            if (entry.Animation.Name == CLIP_NAME_END)
-            {
-                StopAllCoroutines();
-                Destroy(gameObject);
-                OnEffectDestroy?.Invoke();
-            }
-        }
+        // /// <summary>
+        // /// 애니메이션이 끝나면 호출되는 콜백 함수
+        // /// </summary>
+        // /// <param name="entry"></param>
+        // protected void OnAnimationComplete(TrackEntry entry)
+        // {
+        //     if (entry.Animation.Name == CLIP_NAME_END)
+        //     {
+        //         StopAllCoroutines();
+        //         Destroy(gameObject);
+        //         OnEffectDestroy?.Invoke();
+        //     }
+        // }
         /// <summary>
         /// 캐릭터 순서. sorting order 처리 
         /// </summary>
