@@ -1,4 +1,5 @@
-// test script
+using UnityEngine;
 
-
-// test2222
+public class TestGame : MonoBehaviour
+{
+}
