@@ -28,6 +28,11 @@
 				"displayName": "Resource ",
 				"description": "Resource 설명",
 				"path": "Samples~/Resources"
+			},
+			{
+				"displayName": "Fonts ",
+				"description": "Fonts 설명",
+				"path": "Samples~/Fonts"
 			}
 		],
 	  "keywords": [
