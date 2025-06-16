@@ -9,7 +9,7 @@
 	    "url": "https://github.com/GGemCo/test2"
 	  },
 		"dependencies": {
-			"com.unity.addressable": "2.2.2"
+			"com.unity.addressables": "2.2.2"
 		},
 	  "keywords": [
 	    "debug",
