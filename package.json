@@ -9,7 +9,9 @@
 	    "url": "https://github.com/GGemCo/test2"
 	  },
 		"dependencies": {
-			"com.unity.addressables": "2.2.2"
+			"com.unity.addressables": "2.2.2",
+			"com.unity.nuget.newtonsoft-json": "3.2.1",
+			"com.unity.textmeshpro": "3.0.9"
 		},
 	  "keywords": [
 	    "debug",
