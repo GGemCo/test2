@@ -53,9 +53,9 @@ namespace GGemCo.Scripts
             {
                 spawnPosition = playSpawnPosition;
             }
-            SceneGame.Instance.player.GetComponent<Player>().MoveTeleport(spawnPosition.x, spawnPosition.y);
-            SceneGame.Instance.player.GetComponent<Player>().SetMapSize(mapTileCommon.GetMapSize());
-            SceneGame.Instance.cameraManager.SetFollowTarget(SceneGame.Instance.player.transform);
+            SceneGame.Instance.player?.GetComponent<Player>().MoveTeleport(spawnPosition.x, spawnPosition.y);
+            SceneGame.Instance.player?.GetComponent<Player>().SetMapSize(mapTileCommon.GetMapSize());
+            SceneGame.Instance.cameraManager?.SetFollowTarget(SceneGame.Instance.player?.transform);
 
             // yield return new WaitForSeconds(ConfigCommon.CharacterFadeSec/2);
             yield return null;

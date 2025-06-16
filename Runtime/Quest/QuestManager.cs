@@ -41,11 +41,11 @@ namespace GGemCo.Scripts
             tableQuest = TableLoaderManager.Instance.TableQuest;
             
             uiWindowHudQuest =
-                sceneGame.uIWindowManager.GetUIWindowByUid<UIWindowHudQuest>(UIWindowManager.WindowUid.HudQuest);
+                sceneGame.uIWindowManager?.GetUIWindowByUid<UIWindowHudQuest>(UIWindowManager.WindowUid.HudQuest);
             uiWindowQuestReward =
-                sceneGame.uIWindowManager.GetUIWindowByUid<UIWindowQuestReward>(UIWindowManager.WindowUid.QuestReward);
+                sceneGame.uIWindowManager?.GetUIWindowByUid<UIWindowQuestReward>(UIWindowManager.WindowUid.QuestReward);
             uiWindowInventory =
-                sceneGame.uIWindowManager.GetUIWindowByUid<UIWindowInventory>(UIWindowManager.WindowUid.Inventory);
+                sceneGame.uIWindowManager?.GetUIWindowByUid<UIWindowInventory>(UIWindowManager.WindowUid.Inventory);
             
             LoadAllQuestJson();
             

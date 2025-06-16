@@ -355,7 +355,7 @@ namespace GGemCo.Scripts
             var result = mapTileCommon.GetMapSize();
 
             // 로드된 맵에 맞게 맵 영역 사이즈 갱신하기 
-            SceneGame.Instance.cameraManager.ChangeMapSize(result.x, result.y);
+            SceneGame.Instance.cameraManager?.ChangeMapSize(result.x, result.y);
             
             onLoadTileMap?.Invoke();
             // Logger.Log("타일맵 프리팹 로드 완료");

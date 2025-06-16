@@ -34,7 +34,7 @@ namespace GGemCo.Scripts
                 QuestDatas = new Dictionary<int, QuestSaveData>(saveDataContainer.QuestData.QuestDatas);
             }
             uiWindowHudQuest =
-                SceneGame.Instance.uIWindowManager.GetUIWindowByUid<UIWindowHudQuest>(
+                SceneGame.Instance.uIWindowManager?.GetUIWindowByUid<UIWindowHudQuest>(
                     UIWindowManager.WindowUid.HudQuest);
         }
 

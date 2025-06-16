@@ -46,7 +46,10 @@ namespace GGemCo.Scripts
             currentState = State.Idle;
             
             // 기존 컨트롤러 초기화 이후
-            dialogueBalloonPool = new DialogueBalloonPool(sceneGame.containerDialogueBalloon.transform); // 부모는 선택
+            if (sceneGame.containerDialogueBalloon)
+            {
+                dialogueBalloonPool = new DialogueBalloonPool(sceneGame.containerDialogueBalloon.transform); // 부모는 선택
+            }
         }
         public bool IsPlaying() => currentState == State.Playing;
         /// <summary>
