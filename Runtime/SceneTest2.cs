@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GGemCo
 {
-    public class SceneGame : MonoBehaviour
+    public class SceneTest2 : MonoBehaviour
     {
     }
 }
