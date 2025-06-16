@@ -33,9 +33,9 @@ namespace GGemCo.Scripts
         public GameObject containerMaterial;
         [Header("강화하기 버튼")]
         public Button buttonUpgrade;
-
+#if GGEMCO_USE_SPINE
         [Header("강화 이펙트 오브젝트")] public Spine2dUIController effectItemUpgrade;
-        
+#endif
         private TableItem tableItem;
         private TableStatus tableStatus;
         private TableItemUpgrade tableItemUpgrade;
@@ -315,6 +315,7 @@ namespace GGemCo.Scripts
             {
                 textResult.gameObject.SetActive(false);
             }
+#if GGEMCO_USE_SPINE
             // 이펙트 실행
             List<StruckAddAnimation> addAnimations = new List<StruckAddAnimation>
             {
@@ -323,7 +324,9 @@ namespace GGemCo.Scripts
             };
             TrackEntry entry = effectItemUpgrade.PlayAnimation("play", false, 1.0f, addAnimations);
             entry.Complete += OnAnimationComplete;
-
+#else
+            OnAnimationComplete();
+#endif
             updateResult = false;
             int random = Random.Range(0, 100);
             if (random < struckTableItemUpgrade.Rate)
@@ -335,7 +338,7 @@ namespace GGemCo.Scripts
         /// 강화 연출 스파인 애니메이션이 종료된 후 UI에 결과를 반영합니다.
         /// </summary>
         /// <param name="e"></param>
-        private void OnAnimationComplete(TrackEntry e)
+        private void OnAnimationComplete(TrackEntry e = null)
         {
             textResult.gameObject.SetActive(true);
             if (updateResult)
