@@ -15,14 +15,9 @@
 		},
 		"samples": [
 			{
-				"displayName": "Table Resource",
-				"description": "Table Resource 설명",
-				"path": "Samples~/Tables"
-			},
-			{
-				"displayName": "Spine Resource",
-				"description": "Spine Resource 설명",
-				"path": "Samples~/Spines"
+				"displayName": "Data Resource",
+				"description": "Data Resource 설명",
+				"path": "Samples~/Data"
 			},
 			{
 				"displayName": "Scenes Resource",
@@ -30,9 +25,9 @@
 				"path": "Samples~/Scenes"
 			},
 			{
-				"displayName": "Images Resource",
-				"description": "Images Resource 설명",
-				"path": "Samples~/Images"
+				"displayName": "Resource ",
+				"description": "Resource 설명",
+				"path": "Samples~/Resources"
 			}
 		],
 	  "keywords": [
