@@ -33,6 +33,16 @@
 				"displayName": "Fonts ",
 				"description": "Fonts 설명",
 				"path": "Samples~/Fonts"
+			},
+			{
+				"displayName": "Scripts ",
+				"description": "Scripts 설명",
+				"path": "Samples~/Scripts"
+			},
+			{
+				"displayName": "Prefabs ",
+				"description": "Prefabs 설명",
+				"path": "Samples~/Prefabs"
 			}
 		],
 	  "keywords": [
